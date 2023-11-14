@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>imskakadiya</title>
+    <link rel="icon" href="logo.png">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1 style="color: aliceblue;">Remaining Marks Calculator</h1>
+		<div class="form">
+			<label for="subject">Created by
+				<a href="https://www.instagram.com/imskakadiya/"><span class="fa fa-instagram"></span>Sujal kakadiya</a>  </label>
+			<label for="marks1">Marks (out of 30):</label>
+			<input type="number" id="marks1" placeholder="Enter marks" min="0" max="30" required oninput="validateInput(this)">
+			<label for="marks2">Marks (out of 30):</label>
+			<input type="number" id="marks2" placeholder="Enter marks" min="0" max="30" required oninput="validateInput(this)">
+			<button onclick="calculatePercentage()">Calculate</button>
+			<p id="percentage"></p>
+			<p id="pp"></p>
+		</div>
+		
+		<script>
+			function validateInput(input) {
+				if (input.value < 0) {
+					alert("Marks (out of 30) should not be less than 30.");
+					input.value = 0;
+					return;
+				}
+				if (input.value > 30) {
+					alert("Marks (out of 30) should not be less than 30.");
+					input.value = 0;
+					return;
+				}
+			}
+		</script>
+		
+        
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
